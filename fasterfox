@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+# for a mac
+/Applications/Firefox.app/Contents/MacOS/firefox -P single-thread &
+echo "setting nice to -15 for process:"
+FOO=`pgrep firefox`
+echo $FOO
+# sudo renice -15 -p `pgrep firefox`
+THECMD="do shell script \"sudo renice -15 -p "
+THECMD+=$FOO
+THECMD+="\" with administrator privileges"
+echo $THECMD
+osascript -e "$THECMD"

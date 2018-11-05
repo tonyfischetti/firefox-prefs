@@ -1,0 +1,4 @@
+
+My mods to firefox profiles and "fasterfox"...
+which uses single-process firefox and `renices`
+to a higher scheduling priority
